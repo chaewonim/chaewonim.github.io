@@ -1,13 +1,418 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-<title> My own refrigerator </title>
-</head>
+  <head>
 
-<body>
-<h1> Welcome! </h1>
-<p> produce by chae-won. </p>
-<img src="data:image/jpeg;base64,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"></img>
-</body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Add Food</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Add Food to Daily Life</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Timeline</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">Add Food to Daily Life</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0"> 일상에 음식을 더하다 </h2>
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Timeline</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/game.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">About</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">지루한 일상에 달콤한 음식을 더해 자신만이 알고 있는 레시피나 맛집들을 타임라인에서 함께 공유해 보세요.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">재료는 넘쳐나는데 레시피를 모를 때, 반복되는 음식에 실증이 날 때, 여행에서 맛집을 찾을 때, 주위에 몰랐던 맛집을 알고 싶을 때, 일상에 음식을 더하다!</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="#">
+            <i class="fa fa-download mr-2"></i>
+            Download Now!
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Email Address</label>
+                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Phone Number</label>
+                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">전라남도 순천시 중앙로 255 순천대학교 컴퓨터교육과
+              <br>Chaewon,IM 20165111</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Me</h4>
+            <p class="lead mb-0">created by
+              <a href="http://comedu.scnu.ac.kr/web/comedu/home"></a>Chae Won.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; Add Food 2018</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
 
 </html>
